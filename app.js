@@ -12,7 +12,7 @@ var express = require('express')
   , fs = require('fs');
 
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: 'server402.webhostingpad.com', port: '2083'});
+var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: '192.168.1.%'});
 
 var passport = require('passport')
   , GoogleStrategy = require('passport-google').Strategy;
