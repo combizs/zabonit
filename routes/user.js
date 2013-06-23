@@ -1,6 +1,6 @@
 
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('bizbase', 'root', '~Silent83');
+var sequelize = new Sequelize('bizbase', 'root', '~Password1');
 
 var User = sequelize.define('User', { openid: Sequelize.STRING, firstname: Sequelize.STRING, lastname: Sequelize.STRING }, {
   instanceMethods: {

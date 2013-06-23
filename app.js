@@ -16,7 +16,7 @@ var Sequelize = require("sequelize");
 var passport = require('passport')
   , GoogleStrategy = require('passport-google').Strategy;
 
-var sequelize = new Sequelize('bizbase', 'root', '~Silent83');
+var sequelize = new Sequelize('bizbase', 'root', '~Password1');
 
 var User = sequelize.define('User', { openid: Sequelize.STRING, firstname: Sequelize.STRING, lastname: Sequelize.STRING }, {
   instanceMethods: {
@@ -35,8 +35,8 @@ passport.deserializeUser(function(user, done) {
 });
 
 passport.use(new GoogleStrategy({
-    returnURL: 'http://127.0.0.1:3000/auth/google/return',
-    realm: 'http://127.0.0.1:3000/'
+    returnURL: 'http://zabonit.herokuapp.com/auth/google/return',
+    realm: 'http://zabonit.herokuapp.com/'
   },
   function(identifier, profile, done) {
     User.findOrCreate({ openid: identifier, firstname: profile.name.givenName, lastname: profile.name.familyName }).done(done);
