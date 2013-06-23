@@ -93,10 +93,3 @@ function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
   res.redirect('/home')
 }
-
-// send url to function
-// sterilize string
-// check db for hash value
-//   hash value with function if doesnt exist.
-//     send data to api to retrieve content.
-//   return content if exists
