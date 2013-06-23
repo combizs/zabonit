@@ -61,7 +61,7 @@ $(document).ready(function (){
     return false;
   });
   var writeComment = function(comment) {
-    if(comment){
+    if(comment & $('#targetdiv').data().id){
       var selected = '';
       
       //need to write blank content to data of writeComment
@@ -74,8 +74,8 @@ $(document).ready(function (){
         parent: 0,
         selected: selected,
         website: $('#targetdiv').data().id,
-        start: $('#writeComment').data().data.start,
-        end: $('#writeComment').data().data.end
+        start: $('#writeComment').data().data.start || 0,
+        end: $('#writeComment').data().data.end || 0
       }
       $.ajax({
         url: 'http://zabonit.herokuapp.com/comment',
