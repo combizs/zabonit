@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  nav 
+    a(href="/logout") Logout
+  header
+    div
+      input.url(type='text', placeholder='Enter URL here to print out article content below', value='http://www.huffingtonpost.com/mark-sisson/grains-and-health_b_3468528.html')
+      //- button.submit Send
+      div#targetdiv
+  aside#side
+    div.fixed
+      div#comment
+        div
+          input#writeComment(placeholder='Write Comments Here')
+          div#hold
+      div#listComments Recent Comments
+        div#showComments
+      
