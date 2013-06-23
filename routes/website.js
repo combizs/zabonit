@@ -13,24 +13,21 @@ exports.index = function(req, res){
   var content = '';
 
   readability.read('https://www.readability.com/api/content/v1/parser?token=be4591d022b60dc6ad175516afb712a7797f3836&url='+req.query.url, function(err, article) {
-    if(article) {
-      content = article.getContent();
+    content = article.getContent();
+    if(content) {
       Website.findOrCreate({ url: req.query.url}, {
         user: req.user.id, 
         content: content.replace(/\\n/g, ' ').replace('/\\t/g','').trim()
       })
       .success(function(website, created) {
-        console.log(website.values);
         res.send({'content': website.values.content, 'id': website.values.id});
       })
       .error(function(err) {
-        console.log(err);
-        res.send({'content': 'mothafuckn ERR'});
+        res.send({'content': 'failed to return article found'});
       });
     }
     else {
-      console.log("content" + content);
-      res.send({'content': 'nothing'});
+      res.send({'content': 'no article found'});
     }
   });
 };

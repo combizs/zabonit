@@ -12,7 +12,8 @@ $(document).ready(function (){
         success: function(data) {
           var content = data.content;
           content = content.replace(regex, '').replace(/\\n/g, ' ').replace('/\\t/g','');
-          $('#targetdiv').empty().append(content).data('id', data.id);
+          $('#targetdiv').empty().append(content);
+          $('#targetdiv').data('id', data.id);
           $('#showComments').text('');
 
           jsonData = {'website': data.id};
@@ -64,7 +65,7 @@ $(document).ready(function (){
       var selected = '';
       
       //need to write blank content to data of writeComment
-      if($('#writeComment').data().data.content) {
+      if($('#writeComment').data().data) {
         selected = $('#writeComment').data().data.content;
       }
 
