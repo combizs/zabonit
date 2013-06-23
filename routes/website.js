@@ -1,6 +1,6 @@
 
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('bizbase', 'root', '~Password');
+var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "my.server.tld"});
 
 var Website = sequelize.define('Website', { id: Sequelize.INTEGER, url: Sequelize.STRING, user: Sequelize.INTEGER, content: Sequelize.STRING, createdAt: Sequelize.STRING, updatedAt: Sequelize.STRING });
 

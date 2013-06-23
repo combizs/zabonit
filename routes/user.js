@@ -1,6 +1,6 @@
 
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('bizbase', 'root', '~Password1');
+var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "my.server.tld"});
 
 var User = sequelize.define('User', { openid: Sequelize.STRING, firstname: Sequelize.STRING, lastname: Sequelize.STRING }, {
   instanceMethods: {

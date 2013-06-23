@@ -6,7 +6,7 @@ $(document).ready(function (){
     if(domain){
       var jsonData = {'url': $('input.url').val()};
       $.ajax({
-        url: 'http://zabonit.herokuapp.com/website',
+        url: 'http://127.0.0.1:3000/website',
         data: jsonData,
         dataType: 'json',
         success: function(data) {
@@ -17,7 +17,7 @@ $(document).ready(function (){
 
           jsonData = {'website': data.id};
           $.ajax({
-            url: 'http://zabonit.herokuapp.com/comment',
+            url: 'http://127.0.0.1:3000/comment',
             data: jsonData,
             dataType: 'json',
             success: function(data){
@@ -81,7 +81,7 @@ $(document).ready(function (){
         end: $('#writeComment').data().data.end
       }
       $.ajax({
-        url: 'http://zabonit.herokuapp.com/comment',
+        url: 'http://127.0.0.1:3000/comment',
         dataType: 'json',
         data: jsonData,
         type: 'POST',

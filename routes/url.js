@@ -1,6 +1,6 @@
 
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('bizbase', 'root', '~Password');
+var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "my.server.tld"});
 
 var djb2Code = function(str){
   var hash = 5381;
