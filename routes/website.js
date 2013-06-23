@@ -15,7 +15,7 @@ exports.index = function(req, res){
   readability.read('https://www.readability.com/api/content/v1/parser?token=be4591d022b60dc6ad175516afb712a7797f3836&url='+req.query.url, function(err, article) {
     content = article.getContent();
     if(content) {
-      Website.findOrCreate({ url: req.query.url}, {
+      Website.findOrCreate({ url: "req.query.url"}, {
         user: req.user.id, 
         content: content.replace(/\\n/g, ' ').replace('/\\t/g','').trim()
       })

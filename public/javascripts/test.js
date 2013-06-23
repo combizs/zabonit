@@ -41,10 +41,6 @@ $(document).ready(function (){
     // }
   };
 
-  // $('button.submit').on('click', function(event) {
-  //   fetchUrl($('input.url').val());
-  // });
-
   $('input.url').on('keyup', function(event) {
     var key = event.keyCode;
 
