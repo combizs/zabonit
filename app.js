@@ -16,7 +16,7 @@ var Sequelize = require("sequelize");
 var passport = require('passport')
   , GoogleStrategy = require('passport-google').Strategy;
 
-var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "my.server.tld"}, {host: "my.server.tld"});
+var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "https://server402.webhostingpad.com:2083"});
 
 var User = sequelize.define('User', { openid: Sequelize.STRING, firstname: Sequelize.STRING, lastname: Sequelize.STRING }, {
   instanceMethods: {

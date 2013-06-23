@@ -1,5 +1,5 @@
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "my.server.tld"});
+var sequelize = new Sequelize('flashcar_zab', 'flashcar_zab', '~Password1', {host: "https://server402.webhostingpad.com:2083"});
 
 var Comment = sequelize.define('Comment', { user: Sequelize.INTEGER, content: Sequelize.STRING, website: Sequelize.INTEGER, parent: Sequelize.INTEGER, selected: Sequelize.STRING, start: Sequelize.INTEGER, end: Sequelize.INTEGER, createdAt: Sequelize.STRING, updatedAt: Sequelize.STRING });
 
