@@ -56,7 +56,6 @@ $(document).ready(function (){
 
     if (key === 13) {
       writeComment($('#writeComment').val());
-      $('#writeComment').val('');
     }
     return false;
   });
@@ -88,6 +87,7 @@ $(document).ready(function (){
           $('#showComments').prepend('<div id=\'comment_'+data.id+'\' class=\'commentary\'>'+data.comment+'</div>');
           $('#comment_'+data.id).data('data', {'start': data.start, 'end': data.end});
           $('.remove').trigger('click');
+          $('#writeComment').val('');
         },
         error: function() {
           console.log("ERR");
