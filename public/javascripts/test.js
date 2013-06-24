@@ -60,7 +60,7 @@ $(document).ready(function (){
     return false;
   });
   var writeComment = function(comment) {
-    if(comment & $('#targetdiv').data().id){
+    if(comment && $('#targetdiv').data().id){
       var selected = '', start = 0, end = 0
       
       //need to write blank content to data of writeComment
