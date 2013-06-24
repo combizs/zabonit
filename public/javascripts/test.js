@@ -37,9 +37,6 @@ $(document).ready(function (){
         }
       });
     }
-    else {
-      alert("Enter a URL in the orange box to the left and press enter first!")
-    }
   };
 
   $('input.url').on('keyup', function(event) {
@@ -94,7 +91,7 @@ $(document).ready(function (){
       });
     }
     else {
-      console.error('add css to highlight input box and add message');
+      alert("Enter a URL in the orange box to the left and press enter first!")
     }
   };
 
