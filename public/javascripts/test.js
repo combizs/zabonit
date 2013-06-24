@@ -37,9 +37,9 @@ $(document).ready(function (){
         }
       });
     }
-    // else {
-    //   $('input.url').addClass('error');
-    // }
+    else {
+      alert("Enter a URL in the orange box to the left and press enter first!")
+    }
   };
 
   $('input.url').on('keyup', function(event) {
@@ -63,7 +63,6 @@ $(document).ready(function (){
     if(comment && $('#targetdiv').data().id){
       var selected = '', start = 0, end = 0
       
-      //need to write blank content to data of writeComment
       if($('#writeComment').data().data) {
         selected = $('#writeComment').data().data.content;
         start = $('#writeComment').data().data.start;
@@ -99,10 +98,6 @@ $(document).ready(function (){
     }
   };
 
-  // $('button.comment').on('click', function() {
-  //   writeComment($('#writeComment').val());
-  //   $('#writeComment').val('');
-  // });
   var startid = '';
   var endid = '';
   $('#targetdiv').on('mousedown', function(e){
